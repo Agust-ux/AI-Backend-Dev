@@ -3,11 +3,11 @@
 Systemet skal bygges med følgende arkitektur:
 
 Client
-↓
+->
 FastAPI Backend
-↓
+->
 OpenAI API
-↓
+->
 SQL Database
 
 -----------
