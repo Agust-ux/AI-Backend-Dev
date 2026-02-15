@@ -34,3 +34,6 @@ Dette viser forståelse for drift og produksjonsnære løsninger.
 ---------
 Sikkerhet
 ---------
+API-nøkkel lagres i miljøvariabler
+Ingen sensitiv informasjon hardkodes
+Strukturert feilhåndtering
