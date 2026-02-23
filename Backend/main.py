@@ -12,4 +12,4 @@ print("Tabellene er laget!")
 # Test endpoint
 @app.get("/")
 def read_root():
-    return {"message": "Hei, verden!"}
+    return {"message": "Hello world!"}
