@@ -13,3 +13,6 @@ class AILog(Base):
     model_name = Column(String, nullable=True)
     tokens_used = Column(Integer, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
+
+# Dette lager en Python-klasse.
+# Men fordi den arver fra Base, blir den en SQL-tabell.
