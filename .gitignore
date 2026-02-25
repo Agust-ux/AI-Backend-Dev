@@ -1,0 +1,18 @@
+# Environment variables
+.env
+
+# Database file
+ai_logs.db
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code (optional)
+.vscode/
+
+# OS files (Mac)
+.DS_Store

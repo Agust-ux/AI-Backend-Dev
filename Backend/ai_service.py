@@ -1,13 +1,9 @@
-import os #lese miljøvariabler
-from openai import OpenAI #AI klient
-from dotenv import load_dotenv #les .env-filen
+import os
+from openai import OpenAI
 
-load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-# os.getenv() henter variabel fra .env
-# OpenAI lager klient
-# API-nøkkel brukes for autentisering
+
 
 def ask_ai(prompt: str):
     response = client.chat.completions.create(
@@ -17,18 +13,7 @@ def ask_ai(prompt: str):
         ]
     )
 
-# Dette gjør selve AI-kallet:
-#   Modell: "gpt-4o-mini"
-#   Vi sender én melding
-#   AI svarer
-
     return {
-        "answer": response.choices[0].message.content,  #teksten AI-en svarte
-        "tokens": response.usage.total_tokens           #Hvor mange tokens som ble brukt (viktig for logging og kostnad).
+        "answer": response.choices[0].message.content,
+        "tokens": response.usage.total_tokens
     }
-
-if __name__ == "__main__":
-    result = ask_ai("Si hei pa norsk")
-    print(result)
-
-    print(os.getenv("OPENAI_API_KEY"))
